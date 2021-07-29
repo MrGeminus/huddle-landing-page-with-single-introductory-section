@@ -1,5 +1,21 @@
+/*-----------------
+	Font Import
+-----------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*---------------------------
+	Variables definition
+---------------------------*/
+
+$white: hsl(0, 0%, 100%);
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+
+/*---------------------
+	General styling
+---------------------*/
 
 *{
     padding: 0;
@@ -7,6 +23,25 @@
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
+/*-------------------------
+	Screen reader stuff
+-------------------------*/
+
+.screen-readers-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/*------------------
+	Main styling
+------------------*/
 
 .page {
     width: 100vw;
@@ -25,7 +60,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: hsl(257, 40%, 49%);
+        background-color: $violet;
         z-index: -1;
     }
 
@@ -66,7 +101,7 @@
         }
 
         &__title {
-            color: hsl(0, 0%, 100%);
+            color: $white;
             font-size: 1.5rem;
             font-weight: 600;
             font-family: 'Poppins', sans-serif;
@@ -75,7 +110,7 @@
 
         &__description {
             margin-top: 1.1rem;
-            color: hsl(0, 0%, 100%);
+            color: $white;
             font-size: 1rem;
             font-weight: 400;
             font-family: 'Open Sans', sans-serif;
@@ -86,19 +121,19 @@
             padding: 0.6rem 4.7rem;
             margin-top: 1.5rem;
             display: inline-block;
-            color: hsl(257, 40%, 49%);
+            color: $violet;
             font-size: 0.8rem;
             font-weight: 400;
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
-            background-color: hsl(0, 0%, 100%);
+            background-color: $white;
             border-radius: 2.5rem;
             transition: all ease-in-out 0.3s;
         }
 
         &-button:hover {
-            color: hsl(0, 0%, 100%);
-            background-color: hsl(300, 69%, 71%);
+            color: $white;
+            background-color: $soft-magenta;
         }
 
         &__social-media {
@@ -150,7 +185,7 @@
         &__content {
             display: flex;
             flex-direction: column;
-            color: hsl(0, 0%, 100%);
+            color: $white;
             font-size: 0.9rem;
             font-weight: 400;
             font-family: 'Open Sans', sans-serif;
@@ -158,22 +193,25 @@
         }
 
         &__link {
-            color: hsl(300, 69%, 71%);
+            color: $soft-magenta;
             text-decoration: none;
         }
 
         &__link:hover {
-            color: hsl(300, 69%, 71%);
             text-decoration: underline;
         }
     }
 }
 
-@media (min-width:500px) {
+/*-----------------------------------
+	Screens from 690px to 1100px
+-----------------------------------*/ 
+
+@media (min-width:690px) {
     .page {
 
         &-header {
-            padding: 3rem 2.5rem;
+            padding: 3rem 9rem;
     
             &__logo-link {
               height: 3rem;
@@ -183,7 +221,7 @@
 
         &-content {
             width: 100vw;
-            padding: 1.5rem 2.5rem;
+            padding: 1.5rem 9rem;
             align-items: center;
 
             &__illustration {
@@ -220,7 +258,7 @@
 
         &-footer {
             width: 100vw;
-            padding: 1rem 2.5rem;
+            padding: 1rem 9rem;
 
             &__content {
                 flex-direction: row;
@@ -235,6 +273,10 @@
     }
 }
 
+/*-------------------------
+	Screens from 1100px
+-------------------------*/
+
 @media (min-width:1100px) {
     .page {
         background-image: url(../img/bg-desktop.svg);
@@ -242,7 +284,7 @@
         background-position: center left;
 
         &-header {
-            padding: 3rem 3.5rem;
+            padding: 3rem 3.9rem;
     
             &__logo-link {
               height: 3rem;
@@ -251,7 +293,7 @@
         }
 
         &-content {
-            padding: 1.5rem 3.5rem;
+            padding: 1.5rem 3.9rem;
             flex-direction: row;
             align-items: unset;
 
@@ -295,7 +337,7 @@
         }
 
         &-footer {
-            padding: 1rem 3rem;
+            padding: 1rem 3.9rem;
 
             &__content {
                 flex-direction: row;
