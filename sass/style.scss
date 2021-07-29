@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .page {
@@ -19,8 +20,8 @@
     background-position: top;
 
     &__wrapper {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        min-height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -29,12 +30,13 @@
     }
 
     &-header {
-        width: 100%;
+        width: 100vw;
         padding: 2rem 2.3rem;
 
         &__logo-link {
           height: 1.9rem;
           display: inline-block;
+          overflow-x: visible;
         }
 
         &__logo-icon {
@@ -44,7 +46,7 @@
     }
 
     &-content {
-        width: 100%;
+        width: 100vw;
         padding: 1.5rem 2.3rem;
         display: flex;
         flex-direction: column;
@@ -56,16 +58,14 @@
         }
 
         &__introductory-section {
-            height: 100%;
+            width: 100%;
             margin-top: 3.7rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
         }
 
         &__title {
-            margin-top: auto;
             color: hsl(0, 0%, 100%);
             font-size: 1.5rem;
             font-weight: 600;
@@ -87,7 +87,7 @@
             margin-top: 1.5rem;
             display: inline-block;
             color: hsl(257, 40%, 49%);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 400;
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
@@ -144,14 +144,14 @@
     }
 
     &-footer {
-        width: 100%;
+        width: 100vw;
         padding: 1rem 2.3rem;
 
         &__content {
             display: flex;
             flex-direction: column;
             color: hsl(0, 0%, 100%);
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 400;
             font-family: 'Open Sans', sans-serif;
             text-align: center;
@@ -165,6 +165,147 @@
         &__link:hover {
             color: hsl(300, 69%, 71%);
             text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width:500px) {
+    .page {
+
+        &-header {
+            padding: 3rem 2.5rem;
+    
+            &__logo-link {
+              height: 3rem;
+            }
+    
+        }
+
+        &-content {
+            width: 100vw;
+            padding: 1.5rem 2.5rem;
+            align-items: center;
+
+            &__illustration {
+                width: 100%;
+                height: auto;
+            }
+
+            &__introductory-section {
+                width: 100%;
+                margin-top: 3.7rem;
+                align-items:center;
+            }
+
+            &__title {
+                margin-top: auto;
+                font-size: 2.5rem;
+                text-align: center;
+            }
+    
+            &__description {
+                text-align: center;
+            }
+
+            &-button {
+                padding: 0.8rem 3.9rem;
+                font-size: 1rem;
+            }
+
+            &__social-icon {
+                width: 2.3rem;
+                height: 2.3rem;
+            }
+        }
+
+        &-footer {
+            width: 100vw;
+            padding: 1rem 2.5rem;
+
+            &__content {
+                flex-direction: row;
+                font-size: 1rem;
+                justify-content: center;
+            }
+
+            &__text--margin-left {
+                margin-left: 0.3rem;
+            }
+        }
+    }
+}
+
+@media (min-width:1100px) {
+    .page {
+        background-image: url(../img/bg-desktop.svg);
+        background-size: auto 100%;
+        background-position: center left;
+
+        &-header {
+            padding: 3rem 3.5rem;
+    
+            &__logo-link {
+              height: 3rem;
+            }
+    
+        }
+
+        &-content {
+            padding: 1.5rem 3.5rem;
+            flex-direction: row;
+            align-items: unset;
+
+            &__illustration {
+                width: calc(48vw - 3.5rem);
+                height: auto;
+                margin: auto;
+            }
+
+            &__introductory-section {
+                width: calc(52vw - 3.5rem);
+                margin-top: 0rem;
+                margin-left: 3rem;
+                align-items:flex-start;
+            }
+
+            &__title {
+                margin-top: auto;
+                font-size: 2.5rem;
+                text-align: left;
+            }
+    
+            &__description {
+                text-align: left;
+            }
+
+            &-button {
+                padding: 0.8rem 3.9rem;
+                font-size: 1rem;
+            }
+
+            &__social-media {
+                margin-top: auto;
+                margin-left: auto;
+            }
+
+            &__social-icon {
+                width: 2.3rem;
+                height: 2.3rem;
+            }
+        }
+
+        &-footer {
+            padding: 1rem 3rem;
+
+            &__content {
+                flex-direction: row;
+                font-size: 1rem;
+                justify-content: center;
+            }
+
+            &__text--margin-left {
+                margin-left: 0.3rem;
+            }
         }
     }
 }
