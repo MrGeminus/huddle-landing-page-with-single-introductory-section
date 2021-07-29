@@ -53,20 +53,28 @@ $soft-magenta: hsl(300, 69%, 71%);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
-
-    &__wrapper {
+ 
+    &__overlay {
         width: 100vw;
         min-height: 100%;
         position: absolute;
         top: 0;
         left: 0;
-        background-color: $violet;
         z-index: -1;
     }
 
+    &__overlay--color {
+        background-color: $violet;
+    }
+
+    // Header styling
+
     &-header {
         width: 100vw;
-        padding: 2rem 2.3rem;
+
+        &--padding {
+            padding: 2rem 2.3rem;
+        }
 
         &__logo-link {
           height: 1.9rem;
@@ -77,16 +85,21 @@ $soft-magenta: hsl(300, 69%, 71%);
         &__logo-icon {
             height: 100%;
         }
-
     }
 
     &-content {
         width: 100vw;
-        padding: 1.5rem 2.3rem;
         display: flex;
-        flex-direction: column;
         align-items: center;
         flex-grow: 1;
+
+        &--padding {
+            padding: 1.5rem 2.3rem;
+        }
+
+        &--flex-direction {
+            flex-direction: column;
+        }
 
         &__illustration {
             width: 100%;
@@ -94,10 +107,13 @@ $soft-magenta: hsl(300, 69%, 71%);
 
         &__introductory-section {
             width: 100%;
-            margin-top: 3.7rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        &__introductory-section--margin-top {
+            margin-top: 3.7rem;
         }
 
         &__title {
@@ -120,25 +136,31 @@ $soft-magenta: hsl(300, 69%, 71%);
         &-button {
             padding: 0.6rem 4.7rem;
             margin-top: 1.5rem;
-            display: inline-block;
-            color: $violet;
+            display: inline-block; 
             font-size: 0.8rem;
             font-weight: 400;
             font-family: 'Poppins', sans-serif;
             text-decoration: none;
-            background-color: $white;
             border-radius: 2.5rem;
             transition: all ease-in-out 0.3s;
         }
 
-        &-button:hover {
+        &-button--color {
+            color: $violet;
+            background-color: $white;
+        }
+
+        &-button--color:hover {
             color: $white;
             background-color: $soft-magenta;
         }
 
-        &__social-media {
-            margin-top: 4.7rem;
+        &__social-media { 
             display: flex;
+        }
+
+        &__social-media--margin-top {
+            margin-top: 4.7rem;
         }
 
         &__social-icon {
@@ -178,27 +200,37 @@ $soft-magenta: hsl(300, 69%, 71%);
 
     }
 
+    // Footer styling
+
     &-footer {
         width: 100vw;
-        padding: 1rem 2.3rem;
+
+        &--padding {
+            padding: 1rem 2.3rem;
+        }
 
         &__content {
             display: flex;
-            flex-direction: column;
-            color: $white;
             font-size: 0.9rem;
             font-weight: 400;
             font-family: 'Open Sans', sans-serif;
             text-align: center;
         }
-
-        &__link {
-            color: $soft-magenta;
-            text-decoration: none;
+        
+        &__content--flex-direction {
+            flex-direction: column;
         }
 
-        &__link:hover {
-            text-decoration: underline;
+        &__text--color {
+            color: $white;
+        }
+
+        &__link--color {
+            color:$soft-magenta
+        }
+
+        &__link--underline {
+            text-decoration: none;
         }
     }
 }
@@ -211,7 +243,10 @@ $soft-magenta: hsl(300, 69%, 71%);
     .page {
 
         &-header {
-            padding: 3rem 9rem;
+            
+            &--padding {
+                padding: 3rem 9rem;
+            }
     
             &__logo-link {
               height: 3rem;
@@ -221,8 +256,11 @@ $soft-magenta: hsl(300, 69%, 71%);
 
         &-content {
             width: 100vw;
-            padding: 1.5rem 9rem;
             align-items: center;
+
+            &--padding {
+                padding: 1.5rem 9rem;
+            }
 
             &__illustration {
                 width: 100%;
@@ -257,17 +295,27 @@ $soft-magenta: hsl(300, 69%, 71%);
         }
 
         &-footer {
-            width: 100vw;
-            padding: 1rem 9rem;
+            width: 100vw; 
+
+            &--padding {
+                padding: 1rem 9rem;
+            }
 
             &__content {
-                flex-direction: row;
                 font-size: 1rem;
                 justify-content: center;
             }
 
+            &__content--flex-direction {
+                flex-direction: row;
+            }
+
             &__text--margin-left {
                 margin-left: 0.3rem;
+            }
+
+            &__link--underline:hover {
+                text-decoration: underline;
             }
         }
     }
@@ -284,7 +332,10 @@ $soft-magenta: hsl(300, 69%, 71%);
         background-position: center left;
 
         &-header {
-            padding: 3rem 3.9rem;
+
+            &--padding {
+                padding: 3rem 3.9rem;
+            }
     
             &__logo-link {
               height: 3rem;
@@ -293,9 +344,15 @@ $soft-magenta: hsl(300, 69%, 71%);
         }
 
         &-content {
-            padding: 1.5rem 3.9rem;
-            flex-direction: row;
             align-items: unset;
+
+            &--padding {
+                padding: 1.5rem 3.9rem;
+            }
+
+            &--flex-direction {
+                flex-direction: row;
+            }
 
             &__illustration {
                 width: calc(48vw - 3.5rem);
@@ -325,8 +382,11 @@ $soft-magenta: hsl(300, 69%, 71%);
                 font-size: 1rem;
             }
 
-            &__social-media {
+            &__social-media--margin-top {
                 margin-top: auto;
+            }
+
+            &__social-media--margin-left {
                 margin-left: auto;
             }
 
@@ -337,12 +397,18 @@ $soft-magenta: hsl(300, 69%, 71%);
         }
 
         &-footer {
-            padding: 1rem 3.9rem;
+
+            &--padding {
+                padding: 1rem 3.9rem;
+            }
 
             &__content {
-                flex-direction: row;
                 font-size: 1rem;
                 justify-content: center;
+            }
+
+            &__content--flex-direction {
+                flex-direction: row;
             }
 
             &__text--margin-left {

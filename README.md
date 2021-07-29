@@ -11,7 +11,6 @@ This is a solution to the [Huddle landing page with single introductory section 
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -45,11 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-I used this opportunity to practice BEM naming, sass, and application of good accessibility practices.
-
-### Continued development
-
-
+I used this opportunity to practice BEM naming, SASS, and application of good accessibility practices.
 
 ### Useful resources
 

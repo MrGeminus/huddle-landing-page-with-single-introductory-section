@@ -13,20 +13,20 @@
   <!-- Main content starts -->
   <main class="page">
     <!-- Violet overlay that covers the whole page -->
-    <div class="page__wrapper"></div>
+    <div class="page__overlay page__overlay--color"></div>
     <!-- Landing page header starts -->
-    <header class="page-header">
-      <!-- The main heading, only visible for screen readers -->
-      <h1 class="screen-readers-only">Huddle landing page with single introductory sectio</h1>
+    <header class="page-header page-header--padding">
       <!-- Huddle Logo -->
       <a class="page-header__logo-link" href="#"><span class="screen-readers-only">Huddle Logo</span><img
-          class="page-header__logo-icon" src="img/logo.svg"></a>
+          class="page-header__logo-icon" src="img/logo.svg" alt="Logo"></a>
     </header>
     <!-- Landing page header ends -->
-    <article class="page-content">
+    <article class="page-content page-content--padding page-content--flex-direction">
+      <!-- The main heading, only visible for screen readers -->
+      <h1 class="screen-readers-only">Huddle landing page with single introductory sectio</h1>
       <!-- Page illustration -->
       <img class="page-content__illustration" src="img/illustration-mockups.svg" alt="Mockups illustration">
-      <section class="page-content__introductory-section">
+      <section class="page-content__introductory-section page-content__introductory-section--margin-top">
         <!-- Page heading -->
         <h2 class="page-content__title">Build The Community Your Fans Will Love</h2>
         <!-- Short page description -->
@@ -35,9 +35,10 @@
           audience.
           Create connections with your users as you engage in genuine discussion.</p>
         <!-- Action button -->
-        <a class="page-content-button" href="#" target="_blank">Register</a>
+        <a class="page-content-button page-content-button--color" href="#" target="_blank">Register</a>
         <!-- Social media container starts -->
-        <div class="page-content__social-media">
+        <div
+          class="page-content__social-media page-content__social-media--margin-top page-content__social-media--margin-left">
           <!-- Facebook icon -->
           <a class="page-content__social-icon page-content__social-icon--facebook" href="#" target="_blank"><span
               class="screen-readers-only">Huddle on facebook</span></a>
@@ -52,13 +53,15 @@
       </section>
     </article>
     <!-- Landing page footer starts -->
-    <footer class="page-footer">
-      <p class="page-footer__content">
+    <footer class="page-footer page-footer--padding">
+      <p class="page-footer__content page-footer__content--flex-direction">
         <!-- Footer attribution links -->
-        <span>Challenge by <a class="page-footer__link" href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank">Frontend
+        <span class="page-footer__text page-footer__text--color">Challenge by <a
+            class="page-footer__link page-footer__link--color page-footer__link--underline"
+            href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
             Mentor</a>.</span>
-        <span class="page-footer__text page-footer__text--margin-left">Coded by <a class="page-footer__link" href="#"
+        <span class="page-footer__text page-footer__text--color page-footer__text--margin-left">Coded by <a
+            class="page-footer__link page-footer__link--color page-footer__link--underline" href="#"
             target="_blank">Uros Tomic</a>.</span>
       </p>
     </footer>
